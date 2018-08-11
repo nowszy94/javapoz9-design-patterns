@@ -55,5 +55,22 @@ public class Application {
                 .author("Szymon Nowak")
                 .description("lorem ipsum")
                 .build();
+
+        //tak nie robic
+        List<String> items = Arrays.asList("Ala", "ma", "kota");
+        String result = "";
+        for (String item : items) {
+            result += item + ' ';
+        }
+        System.out.println(result);
+
+        //tak robic
+        StringBuilder stringBuilder = new StringBuilder();
+
+        for (String item : items) {
+            stringBuilder.append(item).append(" ");
+        }
+        String message = stringBuilder.toString();
+        System.out.println(message);
     }
 }
