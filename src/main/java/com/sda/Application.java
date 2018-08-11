@@ -39,15 +39,15 @@ public class Application {
                 .item("def")
                 .author("Szymon Nowak")
                 .build();
-        new Document(
-                "My custom title",
-                null,
-                null,
-                null,
-                null);
         Document documentWithCustomTitle = Document.builder()
                 .title("my custom title")
                 .build();
-        System.out.println();
+
+        new Document(documentByBuilder.getTitle(), documentByBuilder.getDescription(),
+                documentByBuilder.getCreationDate(), "Jan Kowalski", documentByBuilder.getItems());
+
+        Document jan_kowalski = Document.builder(documentByBuilder)
+                .author("Jan Kowalski")
+                .build();
     }
 }

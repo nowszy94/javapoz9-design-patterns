@@ -13,6 +13,10 @@ public class Document {
 
     public static DocumentBuilder builder() {
         return new DocumentBuilder();
+}
+
+    public static DocumentBuilder builder(Document document) {
+        return new DocumentBuilder(document);
     }
 
     public Document() {
@@ -72,6 +76,17 @@ public class Document {
         private Instant creationDate = Instant.now();
         private String author = null;
         private List<String> items = new ArrayList<>();
+
+        public DocumentBuilder() {
+        }
+
+        public DocumentBuilder(Document document) {
+            this.title = document.title;
+            this.description = document.description;
+            this.creationDate = document.creationDate;
+            this.author = document.author;
+            this.items = document.items;
+        }
 
         public DocumentBuilder title(String title) {
             this.title = title;
