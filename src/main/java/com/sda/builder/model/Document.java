@@ -1,4 +1,4 @@
-package com.sda.model;
+package com.sda.builder.model;
 
 import java.time.Instant;
 import java.util.ArrayList;

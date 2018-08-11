@@ -1,6 +1,7 @@
-package com.sda;
+package com.sda.builder;
 
-import com.sda.model.Document;
+import com.sda.builder.model.Document;
+import com.sda.builder.model.DocumentLombok;
 
 import java.time.Instant;
 import java.util.Arrays;
@@ -48,6 +49,11 @@ public class Application {
 
         Document jan_kowalski = Document.builder(documentByBuilder)
                 .author("Jan Kowalski")
+                .build();
+
+        DocumentLombok build = DocumentLombok.builder()
+                .author("Szymon Nowak")
+                .description("lorem ipsum")
                 .build();
     }
 }
