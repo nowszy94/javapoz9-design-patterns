@@ -1,4 +1,4 @@
-package com.sda.adapter;
+package com.sda.adapter.domain;
 
 public interface Payment {
     void pay(int amountInPln);

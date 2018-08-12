@@ -1,4 +1,4 @@
-package com.sda.adapter;
+package com.sda.adapter.infrastructure;
 
 public class BitcoinService {
     public void logInToStock() {

@@ -1,4 +1,10 @@
-package com.sda.adapter;
+package com.sda.adapter.application;
+
+import com.sda.adapter.domain.PaymentService;
+import com.sda.adapter.infrastructure.BitcoinPaymentAdapter;
+import com.sda.adapter.infrastructure.BitcoinService;
+import com.sda.adapter.infrastructure.PaypalPaymentAdapter;
+import com.sda.adapter.infrastructure.PaypalService;
 
 import java.util.Arrays;
 

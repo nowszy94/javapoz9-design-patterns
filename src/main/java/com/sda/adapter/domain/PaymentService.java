@@ -1,4 +1,4 @@
-package com.sda.adapter;
+package com.sda.adapter.domain;
 
 import java.util.List;
 import java.util.Random;

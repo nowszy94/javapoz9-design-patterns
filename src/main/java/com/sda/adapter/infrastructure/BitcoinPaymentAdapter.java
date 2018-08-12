@@ -1,4 +1,6 @@
-package com.sda.adapter;
+package com.sda.adapter.infrastructure;
+
+import com.sda.adapter.domain.Payment;
 
 public class BitcoinPaymentAdapter implements Payment {
 
