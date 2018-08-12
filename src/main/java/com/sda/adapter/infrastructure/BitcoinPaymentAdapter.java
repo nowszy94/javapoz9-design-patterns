@@ -4,19 +4,15 @@ import com.sda.adapter.domain.Payment;
 
 public class BitcoinPaymentAdapter implements Payment {
 
-    private BitcoinService bitcoinService;
+    private BitcoinServiceFacade bitcoinServiceFacade;
 
-    public BitcoinPaymentAdapter(BitcoinService bitcoinService) {
-        this.bitcoinService = bitcoinService;
+    public BitcoinPaymentAdapter(BitcoinServiceFacade bitcoinServiceFacade) {
+        this.bitcoinServiceFacade = bitcoinServiceFacade;
     }
 
     @Override
     public void pay(int amountInPln) {
-        bitcoinService.logInToStock();
-        int moneyInUSD = changeFromPlnToUsd(amountInPln);
-        bitcoinService.transferMoneyToStock(moneyInUSD);
-        bitcoinService.buyBitcoins(moneyInUSD);
-        bitcoinService.transferTo("", "", 5);
+        bitcoinServiceFacade.requestPayment("", "", amountInPln);
     }
 
     private int changeFromPlnToUsd(int amountInPln) {
